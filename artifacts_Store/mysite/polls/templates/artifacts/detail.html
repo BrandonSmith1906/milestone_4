@@ -1,0 +1,93 @@
+﻿{% load static %}
+<!DOCTYPE HTML>
+	<head>
+	<title>Artifact Website | Play</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'artifacts/style.css' %}">
+	</head>
+<body>
+		<!---start-wrap---->
+			<!---start-header---->
+			<div class="header">
+				<div class="wrap">
+				<!---start-logo---->
+				<div class="logo">
+					<a href="/polls">Artifact.Com</a>
+				</div>
+				<!---End-logo---->
+				<!---start-top-menu-search---->
+				<div class="top-menu">
+					<div class="top-nav">
+						<ul>
+						<li><a href="/polls">Home</a></li>
+						<li><a href="/polls/contactus">Contact us</a></li>
+							<li><a href="/admin">Admin Panel</a></li>
+						</ul>
+					</div>
+
+					<div class="search">
+						<form>
+							<form type="POST" action="." style="margin: 0">
+                            <input  id="search_box" type="text" name="search_box"  placeholder="Search..." >
+                            <input id="search_submit" type="submit" value="" ></input>                                                                           
+						</form>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+				<!---End-top-menu-search---->
+			</div>
+			<!---End-header---->
+		</div>
+		<div class="clear"> </div>
+		<!---start-content---->
+		<div class="main-content">
+			<div class="wrap">
+			<!---728x90--->
+
+			<div class="right-content-play">
+				<div class="right-content-heading">
+					<div class="right-content-heading-left">
+						<h3>Selected Historical Artifact</h3>
+					</div>
+					<div class="right-content-heading-right">
+						<div class="social-icons">
+			                <ul>
+			                    <li><a class="facebook" href="#" target="_blank"> </a></li>
+			                    <li><a class="twitter" href="#" target="_blank"></a></li>
+			                    <li><a class="googleplus" href="#" target="_blank"></a></li>
+			                    <li><a class="pinterest" href="#" target="_blank"></a></li>
+			                    <li><a class="dribbble" href="#" target="_blank"></a></li>
+			                    <li><a class="vimeo" href="#" target="_blank"></a></li>
+			                </ul>
+					</div>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="inner-page">
+				<div class="title">
+					<h3>{{ this_artifact.artifact_name }}</h3>
+					<a href="#"><img src="{{ this_artifact.artifact_images.url }}" title="{{ this_artificate.artifact_name }}"/>
+
+					</a>
+					<h3>£{{this_artifact.artifact_price}}</h3>
+					<h3>{{ this_artifact.artifact_description }}</h3>
+
+				</div>
+			</div>
+			</div>
+			<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+		<!---End-content---->
+		<!---728x90--->
+
+		<!---start-copy-right---->
+		<div class="copy-right">
+			<<p> &copy; 2019 Artifacts.com. All rights reserved</p>
+		</div>
+		<!---End-copy-right---->
+		<!---End-wrap---->
+	</body>
+</html>
+

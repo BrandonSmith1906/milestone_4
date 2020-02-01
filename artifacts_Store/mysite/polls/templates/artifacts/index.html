@@ -1,0 +1,98 @@
+{% load static %}
+<HTML>
+	<head>
+		<title>Artifacts Website | Home</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'artifacts/style.css' %}">
+	</head>
+<body>
+		<!---start-wrap---->
+			<!---start-header---->
+			<div class="header">
+				<div class="wrap">
+				<!---start-logo---->
+				<div class="logo">
+					<a href="/polls">Artifacts.Com</a>
+				</div>
+				<!---End-logo---->
+				<!---start-top-menu-search---->
+				<div class="top-menu">
+					<div class="top-nav">
+						<ul>
+						<li><a href="/polls">Home</a></li>
+						<li><a href="/polls/contactus">Contact us</a></li>
+							<li><a href="/admin">Admin Panel</a></li>
+						</ul>
+					</div>
+
+					<div class="search">
+						<form type="POST" action="." style="margin: 0">
+                            <input  id="search_box" class="textbox"  type="text" name="search_box"  placeholder="Search..." >
+                            <input id="search_submit" type="submit" value="" ></input>
+                        </form>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+				<!---End-top-menu-search---->
+			</div>
+			<!---End-header---->
+		</div>
+		<div class="clear"> </div>
+		<!---start-content---->
+		<div class="main-content">
+			<div class="wrap">
+
+			<div class="right-content">
+				<div class="right-content-heading">
+					<div class="right-content-heading-left">
+						<h3>Latest Collections</h3>
+					</div>
+					<div class="right-content-heading-right">
+						<div class="social-icons">
+			                <ul>
+			                    <li><a class="facebook" href="#" target="_blank"> </a></li>
+			                    <li><a class="twitter" href="#" target="_blank"></a></li>
+			                    <li><a class="googleplus" href="#" target="_blank"></a></li>
+			                    <li><a class="pinterest" href="#" target="_blank"></a></li>
+			                    <li><a class="dribbble" href="#" target="_blank"></a></li>
+			                    <li><a class="vimeo" href="#" target="_blank"></a></li>
+			                </ul>
+					</div>
+					</div>
+					<div class="clear"> </div>
+				</div>
+    				{% if all_artifacts %}
+    				<div class="content-grids">
+        				{% for artifact in all_artifacts %}
+
+            					<div class="content-grid">
+            						<a href="/polls/{{ artifact.id }}"><img src="{{ artifact.artifact_images.url}}" class="img-responsive" title="{{ artifact.artifact_name }}"/></a>
+            						<h3>{{ artifact.artifact_name }}</h3>
+									<h3>£{{artifact.artifact_price}}</h3>
+            						<a class="button" href="/polls/{{ artifact.id }}">Click For Details</a>
+            					</div>
+            					<!---728x90--->
+
+        				{% endfor %}
+        				<div class="clear"> </div>
+        				</div>
+    				{% endif %}
+					<!---End-pagenation----->
+
+			</div>
+			<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+		<!---End-content---->
+
+
+		<!---start-copy-right---->
+		<div class="copy-right">
+			<p> &copy; 2019 Artifact.com. All rights reserved</p>
+		</div>
+		<!---End-copy-right---->
+		<!---End-wrap---->
+	</body>
+</html>
+

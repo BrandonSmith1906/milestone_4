@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE HTML>
+	<head>
+		<title>Artifact Website | Home</title>
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+
+		<link rel="stylesheet" type="text/css" href="{% static 'Song/style.css' %}">
+	</head>	
+<body>
+		<!---start-wrap---->
+			<!---start-header---->
+			<div class="header">
+				<div class="wrap">
+				<!---start-logo---->
+				<div class="logo">
+					<a href="/polls">Artifact.Com</a>
+				</div>
+				<!---End-logo---->
+				<!---start-top-menu-search---->
+				<div class="top-menu">
+					<div class="top-nav">
+						<ul>
+						<li><a href="/polls">Home</a></li>
+						<li><a href="/polls">Contact us</a></li>
+							<li><a href="/admin">Admin Panel</a></li>
+						</ul>
+					</div>
+					
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+				<!---End-top-menu-search---->
+			</div>
+			<!---End-header---->
+		</div>
+		<div class="clear"> </div>
+		
+			<!---start-content---->
+		<div class="main-content">
+			<div class="wrap">
+
+<div class="container"  style="margin:10px 0px;">
+  <form action="#">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.."> <br> <br>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">   <br>  <br>
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>  <br>   <br>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>    <br>  <br>
+
+    <input type="submit" value="Submit">    <br>  <br>
+
+  </form>
+</div>
+
+</div>
+		<div class="clear"> </div>
+		<!---End-content---->
+		
+
+		<!---start-copy-right---->
+		<div class="copy-right">
+			<p> &copy; 2019 Songs.com. All rights reserved</p>
+		</div>
+		<!---End-copy-right---->
+		<!---End-wrap---->
+	</body>
+</html>
